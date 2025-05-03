@@ -1,0 +1,3 @@
+[submodule "themes/zola-uncouth-theme"]
+	path = themes/zola-uncouth-theme
+	url = https://github.com/ShawnPConroy/zola-uncouth-theme.git
