@@ -2,8 +2,8 @@
 base_url = "https://mywebsite.com"
 
 # The site title and description; used in feeds by default.
-title = ""
-description = ""
+title = "Votes Count"
+description = "Canadian election results"
 
 # The default language; used in feeds.
 default_language = "en"
