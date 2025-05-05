@@ -1,0 +1,112 @@
+:root {
+    
+    --page_bg_color: #eee;
+    --phue: 6;
+    
+}
+
+body {
+    margin: 0;
+    background-color: var(--page_bg_color);
+}
+
+
+.sg6, .yk, .nt, .nu { --phue: 30; }
+.sg5, .bc { --phue: 80; }
+.sg4, .ab, .sk, .mb { --phue: 150; }
+.sg3, .on { --phue: 200; }
+.sg2, .qc { --phue: 270; }
+.sg1, .nb, .ns, .pe, .nl { --phue: 320; }
+
+
+
+body > header > nav {
+    ul {
+        display: grid;
+        margin: 0 1em;
+        padding: 0;
+        grid-template-columns: repeat(15, 1fr);
+        gap: 1em;
+    }
+    li {
+        display: inline-block;
+        margin: 0;
+        list-style-type: none;
+        background-color: oklch(80% .15 var(--phue));
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 0 3px 1px #99d ;
+        text-align: center;
+
+    }
+    .home_link {
+        background-color: #333;
+        
+        :any-link{
+            color: #ddd
+        }
+    }
+
+    .prov {
+        
+    }
+
+    a:any-link {
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+    }
+}
+
+.election {
+    display: grid;
+    gap: 1em;
+    margin-inline: 1em;
+    grid-template-areas: 
+        "name           name"
+        "results_data   results_chart";
+
+    > header {
+        grid-area: name;
+        text-align: center;
+    }
+    .results_data {
+        display: flex;
+        gap: 1em;
+        grid-area: results_data;
+        flex-direction: column;
+    }
+    .results_chart {
+        grid-area: results_chart;
+        background-color: white;
+    }
+    .candidate {
+        background-color: white;
+        border-radius: 4px;
+        display: grid;
+        grid-template-areas: 
+        " name  count"
+            " party percent";
+        padding: .2em;
+
+        span {
+            display: block;
+        }
+        .candidate_name {
+            grid-area: name;
+            font-weight: 800;
+            font-size: larger;
+        }
+        .candidate_party {
+            grid-area: party;
+        }
+        .candidate_count_ballots {
+            grid-area: count;
+            text-align: right;
+        }
+        .candidate_count_percent {
+            grid-area: percent;
+            text-align: right;
+        }
+    }
+}
