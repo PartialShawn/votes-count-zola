@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }}{% endblock title %}
+
+{% block site_header_title %}
+
+{% if config.extra.uncouth_theme_use_section_name == true and current_path != "/" %}
+<header>
+    <h1>{{ section.title }}</h1>
+</header>
+{% else %}
+    {{ super() }}
+{% endif %}
+{% endblock site_header_title %}
+
+{% block content %}
+{{ section.content | safe }}
+{% endblock content %}
+
+
+{% block children %}
+{% include "partials/section-children.html" %}
+{% endblock children %}

@@ -1,0 +1,16 @@
+{% if config.extra.uncouth_theme_hide_section_children == false %}
+<article>
+    {% for section_path in section.subsections %}
+        {% set cur_section = get_section(path=section_path) %}
+        <li><a href="{{ cur_section.permalink }}">📁 {{ cur_section.title }}</a>
+            <p>{{ cur_section.description }}</p>
+        </li>
+    {% endfor  %}
+
+    {% for page in section.pages %}
+        <li><a href="{{ page.permalink }}">📄 {{ page.title }}</a>
+            <p>{{ page.description }}</p>
+        </li>
+    {% endfor  %}
+</article>
+{% endif %}
