@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ lang }}">
+
+<head>
+    {%- block html_head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <link rel="stylesheet" href="{{ get_url(path='/vc.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/favicon-16x16.png">
+
+    {%- if config.generate_feed %}
+    <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+    {%- endif %}
+
+    {%- endblock html_head %}
+</head>
+
+<body>  
+
+{% include "partials/site-header.html" %}
+
+{% block main %}
+<main>
+    {% block content %}{% endblock content %}
+</main>
+{% endblock main %}
+
+{% block children %}{% endblock children %}
+{% include "partials/site-footer.html" %}
+
+</body>
+</html>

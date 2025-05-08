@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock title %}
+
+
+{% block site_header_title %}
+{% if config.extra.uncouth_theme_use_page_name == true %}
+<header>
+    <h1>{{ page.title }}</h1>
+</header>
+{% else %}
+    {{ super() }}
+{% endif %}
+{% endblock site_header_title %}
+
+{% block content %}
+{% if config.extra.uncouth_theme_use_page_name == false %}
+<header>
+    <h1>{{ page.title }}</h1>
+</header>
+{% endif %}
+{{ page.content | safe }}
+{% endblock content %}
