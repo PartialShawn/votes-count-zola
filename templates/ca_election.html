@@ -16,8 +16,6 @@
 {% block content %}
 
 
-{% set result_data = load_data(path="data/preliminary_results.json") %}
-{% set district_results = result_data[page.extra.district_id] %}
 {% block title %}{{ page.title }}{% endblock title %}
 
 {% if config.extra.uncouth_theme_use_page_name == false %}

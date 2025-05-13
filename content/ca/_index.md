@@ -1,5 +1,4 @@
 +++
-title = 'Canadian electoral results'
-page_template = 'ca_district.html'
+title = 'Canadian Info'
 transparent = true
 +++
