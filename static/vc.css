@@ -1,13 +1,46 @@
 :root {
-    
     --page_bg_color: #eee;
     --phue: 6;
-    
 }
 
 body {
     margin: 0;
     background-color: var(--page_bg_color);
+
+    .site_header {
+        grid-area: header;
+        background-color: aquamarine;
+    }
+    .ca_prov {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 1.5ch;
+        height: 100dvh;
+
+    }
+    .ca_dist {
+        position: fixed;
+        top: 0;
+        left: 1.5ch;
+        height: 100dvh;
+        width: 30ch;    
+
+        background-color: white;
+        overflow-y: scroll;
+        max-height: 100dvh;
+        a:any-link {
+            text-decoration: none;
+            color: black;
+        }
+    }
+    > main {
+        grid-area: content;
+        margin-left: 31.5ch;
+    }
+    > footer {
+        grid-area: footer;
+    }
 }
 
 
@@ -20,23 +53,25 @@ body {
 
 
 
-body > header > nav {
+body > nav.ca_prov {
     ul {
         display: grid;
-        margin: 0 1em;
+        margin: 0;
         padding: 0;
-        grid-template-columns: repeat(15, 1fr);
-        gap: 1em;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(15);
+        gap: .5em;
+        height: 100%
     }
     li {
         display: inline-block;
         margin: 0;
+        /* padding-block: 1em; */
         list-style-type: none;
         background-color: oklch(80% .15 var(--phue));
         border-radius: 0 0 4px 4px;
         box-shadow: 0 0 3px 1px #99d ;
-        text-align: center;
-
+        
     }
     .home_link {
         background-color: #333;
@@ -45,16 +80,18 @@ body > header > nav {
             color: #ddd
         }
     }
-
+    
     .prov {
         
     }
-
+    
     a:any-link {
+        text-align: center;
         display: block;
         text-decoration: none;
         color: black;
         font-weight: 700;
+        rotate: 90deg;
     }
 }
 
@@ -108,5 +145,22 @@ body > header > nav {
             grid-area: percent;
             text-align: right;
         }
+    }
+}
+
+.district_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    ul {
+        height: 100%;
+    }
+
+    li {
+        margin: 0;
+        /* TODO: Update to hanging if Chrome ever adds it https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent#browser_compatibility */
+        text-indent: -2ch; 
+        padding-left: 2ch;
     }
 }

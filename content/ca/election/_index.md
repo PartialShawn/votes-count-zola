@@ -1,6 +1,6 @@
 +++
 title = 'Canadian Elections'
 page_template = 'ca_election.html'
-transparent = false
+transparent = true
 sort_by = 'slug'
 +++

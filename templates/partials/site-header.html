@@ -1,6 +1,5 @@
-<header>
 {%- block site_header %}
-    <nav><ul>
+    <nav class="ca_prov"><ul>
         <li class="home_link"><a href="/">VC</a></li>
         <li class="home_link"><a href="/ca/">CA</a></li>
         <li class="prov sgc6 yk"><a href="/ca/yk/">YK</a></li>
@@ -17,11 +16,10 @@
         <li class="prov sgc1 pe"><a href="/ca/pe/">PE</a></li>
         <li class="prov sgc1 nl"><a href="/ca/nl/">NL</a> </li>
     </ul></nav>
-    <div>
+    <div class="site_header">
         {%- block site_header_title %}
         <span class="site_title">{{ config.title }}</span>
         <span class="page_title">{% block title %}{% endblock %}</span>
         {%- endblock site_header_title %}
     </div>
 {%- endblock site_header %}
-</header>

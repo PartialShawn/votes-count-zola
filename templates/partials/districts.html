@@ -1,0 +1,7 @@
+<ul class="district_list"><ul></ul>
+    {% set e_section = get_section(path=page.ancestors[3]) %}
+    {% for d_page in e_section.pages %}
+        <li><a href="{{ d_page.permalink }}">{{ d_page.title | replace(from=" ",to="&nbsp;") | replace(from="--", to="&ZeroWidthSpace;&mdash;") | replace(from="-",to="&#x2011;") | safe }}</a>
+        </li>
+    {% endfor  %}
+    </ul>
