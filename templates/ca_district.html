@@ -1,14 +1,6 @@
-{% extends "base.html" %}
+{% extends "page.html" %}
 
 {% import "macros/debug.html" as debug %}
-
-
-{% block site_header_title %}
-<span class="site_title">{{ config.title }}</span>
-<h1 class="page_title">{% block title %}{% endblock %}</h1>
-{% endblock site_header_title %}
-
-
 
 
 {% block main %}
@@ -17,19 +9,11 @@
   {% set result_data = load_data(path="data/ca_ge"~page.extra.election_id~"_results.json") %}
   {% set district_results = result_data[page.extra.district_id] %}
   
-  {% if config.extra.uncouth_theme_use_page_name == false %}
-  <header>
-    <h1>{{ page.title }}</h1>
-    {% block title %}{{ page.title }}{% endblock title %}
-  </header>
-  {% endif %}
-
 
   {{ page.content | safe }}
   {%- set chart_data = "" %}
   {%- set chart_labels = "" %}
   <section class="election">
-    <header><h1>{{page.extra.election_id}}GE Results</h1></header>
 
     <section class="results_data">
     {% for candidate in district_results.candidates %}
@@ -74,7 +58,6 @@
     </section>
   </section>
   
-
 </main>
 
 <nav class="ca_dist">

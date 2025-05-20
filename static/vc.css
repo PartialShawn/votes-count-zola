@@ -10,7 +10,12 @@ body {
 
     .site_header {
         grid-area: header;
-        background-color: aquamarine;
+
+        h1 {
+            display: inline-block;
+            margin: 0;
+            font-size: medium;
+        }
     }
     .ca_prov {
         position: fixed;
@@ -176,7 +181,7 @@ body > nav.ca_prov {
     .province {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 1em;
+        gap: .3em;
 
     }
     
@@ -186,7 +191,7 @@ body > nav.ca_prov {
         background-color: oklch(100% .01 var(--p_hue));
         padding: 0;
         border: outset 1px oklch(95% .05 var(--p_hue));
-        border-radius: 10px;
+        border-radius: 6px;
         
         > header {
             padding-inline: .5em;
