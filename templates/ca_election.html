@@ -26,18 +26,18 @@
 
 {% block children %}
 
-{% set result_data = load_data(path="data/ca_ge45_results.json") %}
-{% set_global last_prov = '11' %}
+{% set result_data = load_data(path="data/ca_ge"~section.extra.election_id~"_results.json") %}
+{% set_global last_prov = '10' %}
 <div class="ca_e_district_results">
     <h3>{{ last_prov }}</h3>
-    <div class="province">
+    <div class="province" id="prov_{{last_prov}}">
     {% for page in section.pages %}
         {% set district_results = result_data[page.extra.district_id] %}
         {% if page.extra.district_id | truncate(length=2,end="") != last_prov %}
         {% set_global last_prov = page.extra.district_id | truncate(length=2,end="") %}
         </div>
         <h3>{{ last_prov }}</h3>
-        <div class="province">
+        <div class="province" id="prov_{{last_prov}}">
         {% endif %}
     <div class="card party p_{{ district_results.elected_candidate_party }}">
         <header>
