@@ -14,7 +14,7 @@
 {% block main %}
 <main >
   
-  {% set result_data = load_data(path="data/ca_ge45_results.json") %}
+  {% set result_data = load_data(path="data/ca_ge"~page.extra.election_id~"_results.json") %}
   {% set district_results = result_data[page.extra.district_id] %}
   
   {% if config.extra.uncouth_theme_use_page_name == false %}
@@ -29,20 +29,20 @@
   {%- set chart_data = "" %}
   {%- set chart_labels = "" %}
   <section class="election">
-    <header><h1>45GE Preliminary Results</h1></header>
+    <header><h1>{{page.extra.election_id}}GE Results</h1></header>
 
     <section class="results_data">
     {% for candidate in district_results.candidates %}
       <div class="candidate">
-        <span class="candidate_name">{{ candidate.name_first}} {{ candidate.name_middle }} {{ candidate.name_last }}</span>
+        <span class="candidate_name">{{ candidate.name }}</span>
         <span class="candidate_party">{{ candidate.party }}</span>
-        <span class="candidate_count_ballots">{{ candidate.count_ballots }}</span>
-        <span class="candidate_count_percent">{{ candidate.percent_ballots }}%</span>
+        <span class="candidate_count_ballots">{{ candidate.ballots }}</span>
+        <span class="candidate_count_percent">{{ candidate.per_ballots }}%</span>
       </div>
       {% if chart_labels != '' %}{% set_global chart_labels = chart_labels ~ ',' %}{% endif %}
       {%- if chart_data != '' %}{% set_global chart_data = chart_data ~ ',' %}{% endif %}
       {%- set_global chart_labels = chart_labels ~ '"' ~ candidate.party ~ '"' %}
-      {%- set_global chart_data = chart_data ~ '"' ~ candidate.count_ballots ~ '"' %}
+      {%- set_global chart_data = chart_data ~ '"' ~ candidate.ballots ~ '"' %}
     {% endfor %}
     </section>
     <section class="results_chart">
