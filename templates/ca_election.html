@@ -1,29 +1,62 @@
-{% extends "base.html" %}
+{% extends "section.html" %}
 
 {% import "macros/debug.html" as debug %}
 
-
-{% block site_header_title %}
-{% if config.extra.uncouth_theme_use_page_name == true %}
-<header>
-    <h1>{{ page.title }}</h1>
-</header>
-{% else %}
+{% block html_head %}
 {{ super() }}
-{% endif %}
-{% endblock site_header_title %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+{% endblock %}
+
+
+
 
 {% block content %}
 
-
-{% block title %}{{ page.title }}{% endblock title %}
-
-{% if config.extra.uncouth_theme_use_page_name == false %}
-<header>
-    <h1>{{ page.title }}</h1>
+<header >
+    <h1>{{ section.title }}</h1>
 </header>
-{% endif %}
 
-{{ page.content | safe }}
+{{ section.content | safe }}
 
 {% endblock content %}
+
+
+
+{% block children %}
+
+{% set result_data = load_data(path="data/ca_ge45_results.json") %}
+{% set_global last_prov = '11' %}
+<div class="ca_e_district_results">
+    <h3>{{ last_prov }}</h3>
+    <div class="province">
+    {% for page in section.pages %}
+        {% set district_results = result_data[page.extra.district_id] %}
+        {% if page.extra.district_id | truncate(length=2,end="") != last_prov %}
+        {% set_global last_prov = page.extra.district_id | truncate(length=2,end="") %}
+        </div>
+        <h3>{{ last_prov }}</h3>
+        <div class="province">
+        {% endif %}
+    <div class="card party p_{{ district_results.elected_candidate_party }}">
+        <header>
+            <a href="{{ page.permalink }}">🗳️ {{ page.title }}</a>
+        </header>
+        <div class="candidate">
+            <span class="badge p_{{ district_results.elected_candidate_party }}">{{ district_results.elected_candidate_party }}</span>
+            {{ district_results.elected_candidate_given}} {{ district_results.elected_candidate_last}}
+        </div>
+        <footer class="district_history">
+            <div>%</div>
+            <div>%</div>
+            <div>%</div>
+            <div>%</div>
+            <div>{{ district_results.elected_candidate_maj_per }}%</div>
+        </footer>
+    </div>
+    {% endfor  %}
+</div>
+</article>
+
+{% endblock children %}

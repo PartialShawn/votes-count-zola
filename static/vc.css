@@ -4,6 +4,7 @@
 }
 
 body {
+    font-family: "Share", sans-serif;
     margin: 0;
     background-color: var(--page_bg_color);
 
@@ -163,4 +164,78 @@ body > nav.ca_prov {
         text-indent: -2ch; 
         padding-left: 2ch;
     }
+}
+
+.ca_e_district_results {
+    margin: 2em;
+
+    h3 {
+        margin: 10px 0 0 5px;
+    }
+    
+    .province {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1em;
+
+    }
+    
+    .card {
+        display: inline-block;
+        /* margin: .5em; */
+        background-color: oklch(100% .01 var(--p_hue));
+        padding: 0;
+        border: outset 1px oklch(95% .05 var(--p_hue));
+        border-radius: 10px;
+        
+        > header {
+            padding-inline: .5em;
+            border-bottom: solid 1px oklch(100% .15 var(--p_hue));
+            margin-bottom: 2px;
+    
+            /* background-color: burlywood; */
+            :any-link {
+                text-decoration: none;
+                font-size: small;
+                /* font-weight: bold; */
+                color: black;
+            }
+        }
+        > div {
+            padding-inline: .5em;
+        }
+        > footer {
+            padding-inline: .5em;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: .3em;
+            margin: .5em;
+        
+            > div {
+                display: inline-block;
+                border-bottom: solid 2px oklch(60% .2 330);
+                text-align: center;
+            }
+        }
+    }
+}
+
+.party {
+    --p_hue: 330;
+    --p_l: 60%;
+}
+.p_Green {        --p_hue: 140; }
+.p_Liberal {      --p_hue:  25; }
+.p_NDP {          --p_hue:  65; }
+.p_Conservative { --p_hue: 280; }
+.p_Bloc {         --p_hue: 210; --p_l: 75%; }
+
+.party .badge {
+    border-color: oklch(var(--p_l) .2 var(--p_hue));
+    color: oklch(40% .2 var(--p_hue));
+    border-radius: 4px;
+    padding: 2px;
+    font-size: small;
+    font-weight: 200;
+    line-height: 80%;
 }
