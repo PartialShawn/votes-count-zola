@@ -244,3 +244,48 @@ body > nav.ca_prov {
     font-weight: 200;
     line-height: 80%;
 }
+
+
+.ca_e_list {
+
+
+    .card {
+        display: inline-block;
+        /* margin: .5em; */
+        background-color: oklch(100% .01 var(--p_hue));
+        padding: 0;
+        border: outset 1px oklch(95% .05 var(--p_hue));
+        border-radius: 6px;
+        
+        > header {
+            padding-inline: .5em;
+            border-bottom: solid 1px oklch(100% .15 var(--p_hue));
+            margin-bottom: 2px;
+    
+            /* background-color: burlywood; */
+            :any-link {
+                text-decoration: none;
+                font-size: small;
+                /* font-weight: bold; */
+                color: black;
+            }
+        }
+        > div {
+            padding-inline: .5em;
+        }
+        > footer {
+            padding-inline: .5em;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: .3em;
+            margin: .5em;
+        
+            > div {
+                display: inline-block;
+                border-bottom: solid 2px oklch(60% .2 330);
+                text-align: center;
+            }
+        }
+
+
+}

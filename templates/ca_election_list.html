@@ -1,0 +1,36 @@
+{% extends "section.html" %}
+
+{% import "macros/debug.html" as debug %}
+
+
+
+
+{% block content %}
+
+{{ section.content | safe }}
+
+
+<div class="ca_e_list">
+{% for s in section.subsections %}
+    {% set s = get_section(path=s) %}
+    <div class="card ">
+        <header>
+            <a href="{{ s.permalink }}">🗳️ {{ s.title }}</a>
+        </header>
+        <div class="candidate">
+            <span class="badge p_liberal">Liberal</span>
+            YYYY
+        </div>
+        <footer class="district_history">
+            <div>P</div>
+            <div>A</div>
+            <div>R</div>
+            <div>T</div>
+            <div>Y</div>
+        </footer>
+    </div>
+{% endfor  %}
+</div>
+</article>
+
+{% endblock content %}
