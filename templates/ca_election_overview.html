@@ -17,35 +17,41 @@
 
 {% block children %}
 
-{% set result_data = load_data(path="data/ca_ge"~section.extra.election_id~"_results.json") %}
-{% set_global last_prov = '10' %}
+{% set result_data = load_data(path="data/ca_ge"~section.extra.election_id~"_districts.json") %}
+{% set district_meta = load_data(path="data/ca_districts_index.json") %}
+{% set_global last_prov_sgc = '10' %}
+{% set_global last_prov_code = district_meta['10001']['province'] %}
 <div class="ca_e_district_results">
-    <h3>{{ last_prov }}</h3>
-    <div class="province" id="prov_{{last_prov}}">
+    <h3>{{ last_prov_code }}</h3>
+    <div class="province" id="prov_{{last_prov_code}}">
     {% for page in section.pages %}
         {% set district_results = result_data[page.extra.district_id] %}
-        {% if page.extra.district_id | truncate(length=2,end="") != last_prov %}
-        {% set_global last_prov = page.extra.district_id | truncate(length=2,end="") %}
-        </div>
-        <h3>{{ last_prov }}</h3>
-        <div class="province" id="prov_{{last_prov}}">
+        {% if page.extra.district_id | truncate(length=2,end="") != last_prov_sgc %}
+            {% set_global last_prov_sgc = page.extra.district_id | truncate(length=2,end="") %}
+            {% set_global last_prov_code = district_meta[page.extra.district_id]['province'] %}
+            </div>
+            <h3>{{ last_prov_code }}</h3>
+            <div class="province" id="prov_{{last_prov_code}}">
         {% endif %}
-    <div class="card party p_{{ district_results.elected_candidate_party }}">
+    <a href="{{ page.permalink }}" class="card party p_{{ district_results.elected_candidate_party }}">
         <header>
-            <a href="{{ page.permalink }}">🗳️ {{ page.title }}</a>
+            {{ page.title }}
         </header>
         <div class="candidate">
             <span class="badge p_{{ district_results.elected_candidate_party }}">{{ district_results.elected_candidate_party }}</span>
             {{ district_results.elected_candidate_given}} {{ district_results.elected_candidate_last}}
         </div>
         <footer class="district_history">
-            <div>%</div>
-            <div>%</div>
-            <div>%</div>
-            <div>%</div>
-            <div>{{ district_results.elected_candidate_maj_per }}%</div>
+        {% set_global count = 1 %}
+        {% for candidate in result_data[page.extra.district_id]['candidates'] %}
+            <div class="p_{{ candidate['party']}}">
+                {{ candidate['per_ballots']}}%
+            </div>
+            {% if count >= 5 %}{% break %}{% endif %}
+            {% set_global count = count + 1 %}
+        {% endfor %}
         </footer>
-    </div>
+    </a>
     {% endfor  %}
 </div>
 </article>

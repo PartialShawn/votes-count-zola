@@ -6,8 +6,13 @@
 body {
     font-family: "Share", sans-serif;
     margin: 0;
-    background-color: var(--page_bg_color);
-
+    background: repeating-linear-gradient(
+        45deg,
+        oklch(95% .03 330),
+        oklch(95% .03 330)  2em,
+        oklch(90% .05 330)  2em,
+        oklch(90% .05 330)  3em
+        );
     .site_header {
         grid-area: header;
 
@@ -180,45 +185,54 @@ body > nav.ca_prov {
     
     .province {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        /* grid-template-columns: repeat(5, 1fr); */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: .3em;
 
     }
     
-    .card {
+    .card:any-link {
+        width: 30ch;
         display: inline-block;
         /* margin: .5em; */
-        background-color: oklch(100% .01 var(--p_hue));
+        background-color: oklch(98% .01 var(--p_hue));
         padding: 0;
-        border: outset 1px oklch(95% .05 var(--p_hue));
+        border: outset 2px oklch(95% .09 var(--p_hue));
         border-radius: 6px;
+        text-decoration: none;
+        color: black;
         
         > header {
-            padding-inline: .5em;
+            padding-inline: .2em;
             border-bottom: solid 1px oklch(100% .15 var(--p_hue));
             margin-bottom: 2px;
-    
-            /* background-color: burlywood; */
-            :any-link {
-                text-decoration: none;
-                font-size: small;
-                /* font-weight: bold; */
-                color: black;
-            }
+            min-height: 2.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
         }
-        > div {
-            padding-inline: .5em;
+        > .candidate {
+            padding-inline: .2em;
+            font-size: small;
+
         }
+
         > footer {
-            padding-inline: .5em;
+            /* padding-inline: .5em; */
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: .3em;
-            margin: .5em;
+            gap: .2em;
+            margin: .2em;
+            --p_hue: 330;
         
             > div {
                 display: inline-block;
-                border-bottom: solid 2px oklch(60% .2 330);
+                border-bottom: solid 2px oklch(50% .2 var(--p_hue));
+                background: oklch(98% .1 var(--p_hue));
                 text-align: center;
             }
         }
@@ -286,6 +300,6 @@ body > nav.ca_prov {
                 text-align: center;
             }
         }
-
+    }
 
 }
