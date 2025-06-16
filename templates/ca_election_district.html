@@ -8,7 +8,7 @@
 {% block main %}
 <main >
   
-  {% set result_data = load_data(path="data/ca_ge"~page.extra.election_id~"_results.json") %}
+  {% set result_data = load_data(path="data/ca_ge"~page.extra.election_id~"_districts.json") %}
   {% set district_results = result_data[page.extra.district_id] %}
   
 
