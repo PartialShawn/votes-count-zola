@@ -1,0 +1,305 @@
+:root {
+    --page_bg_color: #eee;
+    --phue: 6;
+}
+
+body {
+    font-family: "Share", sans-serif;
+    margin: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        oklch(95% .03 330),
+        oklch(95% .03 330)  2em,
+        oklch(90% .05 330)  2em,
+        oklch(90% .05 330)  3em
+        );
+    .site_header {
+        grid-area: header;
+
+        h1 {
+            display: inline-block;
+            margin: 0;
+            font-size: medium;
+        }
+    }
+    .ca_prov {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 1.5ch;
+        height: 100dvh;
+
+    }
+    .ca_dist {
+        position: fixed;
+        top: 0;
+        left: 1.5ch;
+        height: 100dvh;
+        width: 30ch;    
+
+        background-color: white;
+        overflow-y: scroll;
+        max-height: 100dvh;
+        a:any-link {
+            text-decoration: none;
+            color: black;
+        }
+    }
+    > main {
+        grid-area: content;
+        margin-left: 31.5ch;
+    }
+    > footer {
+        grid-area: footer;
+    }
+}
+
+
+.sg6, .yk, .nt, .nu { --phue: 30; }
+.sg5, .bc { --phue: 80; }
+.sg4, .ab, .sk, .mb { --phue: 150; }
+.sg3, .on { --phue: 200; }
+.sg2, .qc { --phue: 270; }
+.sg1, .nb, .ns, .pe, .nl { --phue: 320; }
+
+
+
+body > nav.ca_prov {
+    ul {
+        display: grid;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(15);
+        gap: .5em;
+        height: 100%
+    }
+    li {
+        display: inline-block;
+        margin: 0;
+        /* padding-block: 1em; */
+        list-style-type: none;
+        background-color: oklch(80% .15 var(--phue));
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 0 3px 1px #99d ;
+        
+    }
+    .home_link {
+        background-color: #333;
+        
+        :any-link{
+            color: #ddd
+        }
+    }
+    
+    .prov {
+        
+    }
+    
+    a:any-link {
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        rotate: 90deg;
+    }
+}
+
+.election {
+    display: grid;
+    gap: 1em;
+    margin-inline: 1em;
+    grid-template-areas: 
+        "name           name"
+        "results_data   results_chart";
+
+    > header {
+        grid-area: name;
+        text-align: center;
+    }
+    .results_data {
+        display: flex;
+        gap: 1em;
+        grid-area: results_data;
+        flex-direction: column;
+    }
+    .results_chart {
+        grid-area: results_chart;
+        background-color: white;
+    }
+    .candidate {
+        background-color: white;
+        border-radius: 4px;
+        display: grid;
+        grid-template-areas: 
+        " name  count"
+            " party percent";
+        padding: .2em;
+
+        span {
+            display: block;
+        }
+        .candidate_name {
+            grid-area: name;
+            font-weight: 800;
+            font-size: larger;
+        }
+        .candidate_party {
+            grid-area: party;
+        }
+        .candidate_count_ballots {
+            grid-area: count;
+            text-align: right;
+        }
+        .candidate_count_percent {
+            grid-area: percent;
+            text-align: right;
+        }
+    }
+}
+
+.district_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    ul {
+        height: 100%;
+    }
+
+    li {
+        margin: 0;
+        /* TODO: Update to hanging if Chrome ever adds it https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent#browser_compatibility */
+        text-indent: -2ch; 
+        padding-left: 2ch;
+    }
+}
+
+.ca_e_district_results {
+    margin: 2em;
+
+    h3 {
+        margin: 10px 0 0 5px;
+    }
+    
+    .province {
+        display: grid;
+        /* grid-template-columns: repeat(5, 1fr); */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .3em;
+
+    }
+    
+    .card:any-link {
+        width: 30ch;
+        display: inline-block;
+        /* margin: .5em; */
+        background-color: oklch(98% .01 var(--p_hue));
+        padding: 0;
+        border: outset 2px oklch(95% .09 var(--p_hue));
+        border-radius: 6px;
+        text-decoration: none;
+        color: black;
+        
+        > header {
+            padding-inline: .2em;
+            border-bottom: solid 1px oklch(100% .15 var(--p_hue));
+            margin-bottom: 2px;
+            min-height: 2.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+        > .candidate {
+            padding-inline: .2em;
+            font-size: small;
+
+        }
+
+        > footer {
+            /* padding-inline: .5em; */
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: .2em;
+            margin: .2em;
+            --p_hue: 330;
+        
+            > div {
+                display: inline-block;
+                border-bottom: solid 2px oklch(50% .2 var(--p_hue));
+                background: oklch(98% .1 var(--p_hue));
+                text-align: center;
+            }
+        }
+    }
+}
+
+.party {
+    --p_hue: 330;
+    --p_l: 60%;
+}
+.p_Green {        --p_hue: 140; }
+.p_Liberal {      --p_hue:  25; }
+.p_NDP {          --p_hue:  65; }
+.p_Conservative { --p_hue: 280; }
+.p_Bloc {         --p_hue: 210; --p_l: 75%; }
+
+.party .badge {
+    border-color: oklch(var(--p_l) .2 var(--p_hue));
+    color: oklch(40% .2 var(--p_hue));
+    border-radius: 4px;
+    padding: 2px;
+    font-size: small;
+    font-weight: 200;
+    line-height: 80%;
+}
+
+
+.ca_e_list {
+
+
+    .card {
+        display: inline-block;
+        /* margin: .5em; */
+        background-color: oklch(100% .01 var(--p_hue));
+        padding: 0;
+        border: outset 1px oklch(95% .05 var(--p_hue));
+        border-radius: 6px;
+        
+        > header {
+            padding-inline: .5em;
+            border-bottom: solid 1px oklch(100% .15 var(--p_hue));
+            margin-bottom: 2px;
+    
+            /* background-color: burlywood; */
+            :any-link {
+                text-decoration: none;
+                font-size: small;
+                /* font-weight: bold; */
+                color: black;
+            }
+        }
+        > div {
+            padding-inline: .5em;
+        }
+        > footer {
+            padding-inline: .5em;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: .3em;
+            margin: .5em;
+        
+            > div {
+                display: inline-block;
+                border-bottom: solid 2px oklch(60% .2 330);
+                text-align: center;
+            }
+        }
+    }
+
+}

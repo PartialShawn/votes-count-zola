@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Votes Count</title>
+    <link rel="stylesheet" href="https://votescount.ca/vc.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <div class="site_header">
+
+<header>
+    <h1>Blackstrap</h1>
+</header>
+
+
+    </div>
+</header>
+
+
+
+<main >
+  
+  
+  
+  
+
+  
+  <section class="election">
+
+    <section class="results_data">
+    
+      <div class="candidate">
+        <span class="candidate_name">Lynne Yelich</span>
+        <span class="candidate_party">Conservative</span>
+        <span class="candidate_count_ballots">23280</span>
+        <span class="candidate_count_percent">54.4%</span>
+      </div>
+      
+    
+      <div class="candidate">
+        <span class="candidate_name">Darien Moore</span>
+        <span class="candidate_party">NDP</span>
+        <span class="candidate_count_ballots">15769</span>
+        <span class="candidate_count_percent">36.8%</span>
+      </div>
+      
+    
+      <div class="candidate">
+        <span class="candidate_name">Deborah J. Walker</span>
+        <span class="candidate_party">Liberal</span>
+        <span class="candidate_count_ballots">2713</span>
+        <span class="candidate_count_percent">6.3%</span>
+      </div>
+      
+    
+      <div class="candidate">
+        <span class="candidate_name">Shawn Setyo</span>
+        <span class="candidate_party">Green</span>
+        <span class="candidate_count_ballots">1033</span>
+        <span class="candidate_count_percent">2.4%</span>
+      </div>
+      
+    
+    </section>
+    <section class="results_chart">
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <canvas id="myChart"></canvas>
+
+      <script>
+      const ctx = document.getElementById('myChart');
+    
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["Conservative","NDP","Liberal","Green"],
+          datasets: [{
+            label: '# of Votes',
+            data: ["23280","15769","2713","1033"],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+    </section>
+  </section>
+  
+</main>
+
+<nav class="ca_dist">
+<ul class="district_list"><ul></ul>
+    
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;10001&#x2F;">Avalon</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;10002&#x2F;">Bonavista&ZeroWidthSpace;&mdash;Gander&ZeroWidthSpace;&mdash;Grand&nbsp;Falls&ZeroWidthSpace;&mdash;Windsor</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;10003&#x2F;">Humber&ZeroWidthSpace;&mdash;St.&nbsp;Barbe&ZeroWidthSpace;&mdash;Baie&nbsp;Verte</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;10004&#x2F;">Labrador</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;10005&#x2F;">Random&ZeroWidthSpace;&mdash;Burin&ZeroWidthSpace;&mdash;St.&nbsp;George's</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;10006&#x2F;">St.&nbsp;John's&nbsp;East</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;10007&#x2F;">St.&nbsp;John's&nbsp;South&ZeroWidthSpace;&mdash;Mount&nbsp;Pearl</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;11001&#x2F;">Cardigan</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;11002&#x2F;">Charlottetown</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;11003&#x2F;">Egmont</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;11004&#x2F;">Malpeque</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;12001&#x2F;">Cape&nbsp;Breton&ZeroWidthSpace;&mdash;Canso</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;12002&#x2F;">Central&nbsp;Nova</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;12003&#x2F;">Dartmouth&ZeroWidthSpace;&mdash;Cole&nbsp;Harbour</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;12004&#x2F;">Halifax</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;12005&#x2F;">Halifax&nbsp;West</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;12006&#x2F;">Kings&ZeroWidthSpace;&mdash;Hants</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;12007&#x2F;">Cumberland&ZeroWidthSpace;&mdash;Colchester&ZeroWidthSpace;&mdash;Musquodoboit&nbsp;Valley</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;12008&#x2F;">Sackville&ZeroWidthSpace;&mdash;Eastern&nbsp;Shore</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;12009&#x2F;">South&nbsp;Shore&ZeroWidthSpace;&mdash;St.&nbsp;Margaret's</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;12010&#x2F;">Sydney&ZeroWidthSpace;&mdash;Victoria</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;12011&#x2F;">West&nbsp;Nova</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;13001&#x2F;">Acadie&ZeroWidthSpace;&mdash;Bathurst</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;13002&#x2F;">Beauséjour</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;13003&#x2F;">Fredericton</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;13004&#x2F;">Fundy&nbsp;Royal</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;13005&#x2F;">Madawaska&ZeroWidthSpace;&mdash;Restigouche</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;13006&#x2F;">Miramichi</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;13007&#x2F;">Moncton&ZeroWidthSpace;&mdash;Riverview&ZeroWidthSpace;&mdash;Dieppe</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;13008&#x2F;">New&nbsp;Brunswick&nbsp;Southwest</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;13009&#x2F;">Saint&nbsp;John</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;13010&#x2F;">Tobique&ZeroWidthSpace;&mdash;Mactaquac</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24001&#x2F;">Abitibi&ZeroWidthSpace;&mdash;Témiscamingue</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24002&#x2F;">Ahuntsic</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24003&#x2F;">Alfred&#x2011;Pellan</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24004&#x2F;">Argenteuil&ZeroWidthSpace;&mdash;Papineau&ZeroWidthSpace;&mdash;Mirabel</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24005&#x2F;">Beauce</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24006&#x2F;">Beauharnois&ZeroWidthSpace;&mdash;Salaberry</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24007&#x2F;">Beauport&ZeroWidthSpace;&mdash;Limoilou</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24008&#x2F;">Berthier&ZeroWidthSpace;&mdash;Maskinongé</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24009&#x2F;">Bourassa</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24010&#x2F;">Brome&ZeroWidthSpace;&mdash;Missisquoi</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24011&#x2F;">Brossard&ZeroWidthSpace;&mdash;La&nbsp;Prairie</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24012&#x2F;">Chambly&ZeroWidthSpace;&mdash;Borduas</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24013&#x2F;">Charlesbourg&ZeroWidthSpace;&mdash;Haute&#x2011;Saint&#x2011;Charles</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24014&#x2F;">Montmorency&ZeroWidthSpace;&mdash;Charlevoix&ZeroWidthSpace;&mdash;Haute&#x2011;Côte&#x2011;Nord</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24015&#x2F;">Châteauguay&ZeroWidthSpace;&mdash;Saint&#x2011;Constant</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24016&#x2F;">Chicoutimi&ZeroWidthSpace;&mdash;Le&nbsp;Fjord</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24017&#x2F;">Compton&ZeroWidthSpace;&mdash;Stanstead</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24018&#x2F;">Drummond</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24019&#x2F;">Gaspésie&ZeroWidthSpace;&mdash;Îles&#x2011;de&#x2011;la&#x2011;Madeleine</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24020&#x2F;">Gatineau</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24021&#x2F;">Hochelaga</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24022&#x2F;">Honoré&#x2011;Mercier</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24023&#x2F;">Hull&ZeroWidthSpace;&mdash;Aylmer</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24024&#x2F;">Jeanne&#x2011;Le&nbsp;Ber</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24025&#x2F;">Joliette</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24026&#x2F;">Jonquière&ZeroWidthSpace;&mdash;Alma</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24027&#x2F;">Lac&#x2011;Saint&#x2011;Louis</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24028&#x2F;">La&nbsp;Pointe&#x2011;de&#x2011;l'Île</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24029&#x2F;">LaSalle&ZeroWidthSpace;&mdash;Émard</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24030&#x2F;">Laurentides&ZeroWidthSpace;&mdash;Labelle</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24031&#x2F;">Laurier&ZeroWidthSpace;&mdash;Sainte&#x2011;Marie</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24032&#x2F;">Laval</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24033&#x2F;">Laval&ZeroWidthSpace;&mdash;Les&nbsp;Îles</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24034&#x2F;">Lévis&ZeroWidthSpace;&mdash;Bellechasse</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24035&#x2F;">Longueuil&ZeroWidthSpace;&mdash;Pierre&#x2011;Boucher</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24036&#x2F;">Lotbinière&ZeroWidthSpace;&mdash;Chutes&#x2011;de&#x2011;la&#x2011;Chaudière</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24037&#x2F;">Louis&#x2011;Hébert</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24038&#x2F;">Louis&#x2011;Saint&#x2011;Laurent</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24039&#x2F;">Manicouagan</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24040&#x2F;">Marc&#x2011;Aurèle&#x2011;Fortin</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24041&#x2F;">Haute&#x2011;Gaspésie&ZeroWidthSpace;&mdash;La&nbsp;Mitis&ZeroWidthSpace;&mdash;Matane&ZeroWidthSpace;&mdash;Matapédia</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24042&#x2F;">Mégantic&ZeroWidthSpace;&mdash;L'Érable</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24043&#x2F;">Montcalm</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24044&#x2F;">Mont&#x2011;Royal</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24045&#x2F;">Notre&#x2011;Dame&#x2011;de&#x2011;Grâce&ZeroWidthSpace;&mdash;Lachine</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24046&#x2F;">Abitibi&ZeroWidthSpace;&mdash;Baie&#x2011;James&ZeroWidthSpace;&mdash;Nunavik&ZeroWidthSpace;&mdash;Eeyou</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24047&#x2F;">Outremont</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24048&#x2F;">Papineau</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24049&#x2F;">Pierrefonds&ZeroWidthSpace;&mdash;Dollard</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24050&#x2F;">Pontiac</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24051&#x2F;">Portneuf&ZeroWidthSpace;&mdash;Jacques&#x2011;Cartier</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24052&#x2F;">Québec</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24053&#x2F;">Repentigny</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24054&#x2F;">Bas&#x2011;Richelieu&ZeroWidthSpace;&mdash;Nicolet&ZeroWidthSpace;&mdash;Bécancour</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24055&#x2F;">Richmond&ZeroWidthSpace;&mdash;Arthabaska</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24056&#x2F;">Rimouski&#x2011;Neigette&ZeroWidthSpace;&mdash;Témiscouata&ZeroWidthSpace;&mdash;Les&nbsp;Basques</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24057&#x2F;">Rivière&#x2011;des&#x2011;Mille&#x2011;Îles</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24058&#x2F;">Montmagny&ZeroWidthSpace;&mdash;L'Islet&ZeroWidthSpace;&mdash;Kamouraska&ZeroWidthSpace;&mdash;Rivière&#x2011;du&#x2011;Loup</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24059&#x2F;">Rivière&#x2011;du&#x2011;Nord</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24060&#x2F;">Roberval&ZeroWidthSpace;&mdash;Lac&#x2011;Saint&#x2011;Jean</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24061&#x2F;">Rosemont&ZeroWidthSpace;&mdash;La&nbsp;Petite&#x2011;Patrie</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24062&#x2F;">Saint&#x2011;Bruno&ZeroWidthSpace;&mdash;Saint&#x2011;Hubert</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24063&#x2F;">Saint&#x2011;Hyacinthe&ZeroWidthSpace;&mdash;Bagot</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24064&#x2F;">Saint&#x2011;Jean</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24065&#x2F;">Saint&#x2011;Lambert</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24066&#x2F;">Saint&#x2011;Laurent&ZeroWidthSpace;&mdash;Cartierville</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24067&#x2F;">Saint&#x2011;Léonard&ZeroWidthSpace;&mdash;Saint&#x2011;Michel</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24068&#x2F;">Saint&#x2011;Maurice&ZeroWidthSpace;&mdash;Champlain</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24069&#x2F;">Shefford</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24070&#x2F;">Sherbrooke</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24071&#x2F;">Terrebonne&ZeroWidthSpace;&mdash;Blainville</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24072&#x2F;">Trois&#x2011;Rivières</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24073&#x2F;">Vaudreuil&#x2011;Soulanges</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24074&#x2F;">Verchères&ZeroWidthSpace;&mdash;Les&nbsp;Patriotes</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;24075&#x2F;">Westmount&ZeroWidthSpace;&mdash;Ville&#x2011;Marie</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35001&#x2F;">Ajax&ZeroWidthSpace;&mdash;Pickering</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35002&#x2F;">Algoma&ZeroWidthSpace;&mdash;Manitoulin&ZeroWidthSpace;&mdash;Kapuskasing</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35003&#x2F;">Ancaster&ZeroWidthSpace;&mdash;Dundas&ZeroWidthSpace;&mdash;Flamborough&ZeroWidthSpace;&mdash;Westdale</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35004&#x2F;">Barrie</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35005&#x2F;">Beaches&ZeroWidthSpace;&mdash;East&nbsp;York</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35006&#x2F;">Bramalea&ZeroWidthSpace;&mdash;Gore&ZeroWidthSpace;&mdash;Malton</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35007&#x2F;">Brampton&ZeroWidthSpace;&mdash;Springdale</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35008&#x2F;">Brampton&nbsp;West</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35009&#x2F;">Brant</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35010&#x2F;">Burlington</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35011&#x2F;">Cambridge</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35012&#x2F;">Carleton&ZeroWidthSpace;&mdash;Mississippi&nbsp;Mills</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35013&#x2F;">Chatham&#x2011;Kent&ZeroWidthSpace;&mdash;Essex</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35014&#x2F;">Durham</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35015&#x2F;">Davenport</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35016&#x2F;">Don&nbsp;Valley&nbsp;East</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35017&#x2F;">Don&nbsp;Valley&nbsp;West</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35018&#x2F;">Dufferin&ZeroWidthSpace;&mdash;Caledon</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35019&#x2F;">Eglinton&ZeroWidthSpace;&mdash;Lawrence</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35020&#x2F;">Elgin&ZeroWidthSpace;&mdash;Middlesex&ZeroWidthSpace;&mdash;London</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35021&#x2F;">Essex</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35022&#x2F;">Etobicoke&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35023&#x2F;">Etobicoke&ZeroWidthSpace;&mdash;Lakeshore</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35024&#x2F;">Etobicoke&nbsp;North</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35025&#x2F;">Glengarry&ZeroWidthSpace;&mdash;Prescott&ZeroWidthSpace;&mdash;Russell</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35026&#x2F;">Bruce&ZeroWidthSpace;&mdash;Grey&ZeroWidthSpace;&mdash;Owen&nbsp;Sound</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35027&#x2F;">Guelph</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35028&#x2F;">Haldimand&ZeroWidthSpace;&mdash;Norfolk</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35029&#x2F;">Haliburton&ZeroWidthSpace;&mdash;Kawartha&nbsp;Lakes&ZeroWidthSpace;&mdash;Brock</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35030&#x2F;">Halton</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35031&#x2F;">Hamilton&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35032&#x2F;">Hamilton&nbsp;East&ZeroWidthSpace;&mdash;Stoney&nbsp;Creek</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35033&#x2F;">Hamilton&nbsp;Mountain</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35034&#x2F;">Huron&ZeroWidthSpace;&mdash;Bruce</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35035&#x2F;">Kenora</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35036&#x2F;">Kingston&nbsp;and&nbsp;the&nbsp;Islands</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35037&#x2F;">Kitchener&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35038&#x2F;">Kitchener&ZeroWidthSpace;&mdash;Conestoga</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35039&#x2F;">Kitchener&ZeroWidthSpace;&mdash;Waterloo</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35040&#x2F;">Lanark&ZeroWidthSpace;&mdash;Frontenac&ZeroWidthSpace;&mdash;Lennox&nbsp;and&nbsp;Addington</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35041&#x2F;">Leeds&ZeroWidthSpace;&mdash;Grenville</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35042&#x2F;">London&ZeroWidthSpace;&mdash;Fanshawe</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35043&#x2F;">London&nbsp;North&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35044&#x2F;">London&nbsp;West</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35045&#x2F;">Markham&ZeroWidthSpace;&mdash;Unionville</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35046&#x2F;">Lambton&ZeroWidthSpace;&mdash;Kent&ZeroWidthSpace;&mdash;Middlesex</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35047&#x2F;">Mississauga&ZeroWidthSpace;&mdash;Brampton&nbsp;South</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35048&#x2F;">Mississauga&nbsp;East&ZeroWidthSpace;&mdash;Cooksville</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35049&#x2F;">Mississauga&ZeroWidthSpace;&mdash;Erindale</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35050&#x2F;">Mississauga&nbsp;South</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35051&#x2F;">Mississauga&ZeroWidthSpace;&mdash;Streetsville</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35052&#x2F;">Nepean&ZeroWidthSpace;&mdash;Carleton</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35053&#x2F;">Newmarket&ZeroWidthSpace;&mdash;Aurora</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35054&#x2F;">Niagara&nbsp;Falls</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35055&#x2F;">Niagara&nbsp;West&ZeroWidthSpace;&mdash;Glanbrook</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35056&#x2F;">Nickel&nbsp;Belt</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35057&#x2F;">Nipissing&ZeroWidthSpace;&mdash;Timiskaming</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35058&#x2F;">Northumberland&ZeroWidthSpace;&mdash;Quinte&nbsp;West</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35059&#x2F;">Oak&nbsp;Ridges&ZeroWidthSpace;&mdash;Markham</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35060&#x2F;">Oakville</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35061&#x2F;">Oshawa</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35062&#x2F;">Ottawa&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35063&#x2F;">Ottawa&ZeroWidthSpace;&mdash;Orléans</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35064&#x2F;">Ottawa&nbsp;South</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35065&#x2F;">Ottawa&ZeroWidthSpace;&mdash;Vanier</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35066&#x2F;">Ottawa&nbsp;West&ZeroWidthSpace;&mdash;Nepean</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35067&#x2F;">Oxford</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35068&#x2F;">Parkdale&ZeroWidthSpace;&mdash;High&nbsp;Park</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35069&#x2F;">Parry&nbsp;Sound&ZeroWidthSpace;&mdash;Muskoka</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35070&#x2F;">Perth&ZeroWidthSpace;&mdash;Wellington</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35071&#x2F;">Peterborough</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35072&#x2F;">Pickering&ZeroWidthSpace;&mdash;Scarborough&nbsp;East</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35073&#x2F;">Prince&nbsp;Edward&ZeroWidthSpace;&mdash;Hastings</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35074&#x2F;">Renfrew&ZeroWidthSpace;&mdash;Nipissing&ZeroWidthSpace;&mdash;Pembroke</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35075&#x2F;">Richmond&nbsp;Hill</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35076&#x2F;">St.&nbsp;Catharines</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35077&#x2F;">St.&nbsp;Paul's</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35078&#x2F;">Sarnia&ZeroWidthSpace;&mdash;Lambton</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35079&#x2F;">Sault&nbsp;Ste.&nbsp;Marie</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35080&#x2F;">Scarborough&ZeroWidthSpace;&mdash;Agincourt</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35081&#x2F;">Scarborough&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35082&#x2F;">Scarborough&ZeroWidthSpace;&mdash;Guildwood</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35083&#x2F;">Scarborough&ZeroWidthSpace;&mdash;Rouge&nbsp;River</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35084&#x2F;">Scarborough&nbsp;Southwest</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35085&#x2F;">Simcoe&ZeroWidthSpace;&mdash;Grey</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35086&#x2F;">Simcoe&nbsp;North</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35087&#x2F;">Stormont&ZeroWidthSpace;&mdash;Dundas&ZeroWidthSpace;&mdash;South&nbsp;Glengarry</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35088&#x2F;">Sudbury</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35089&#x2F;">Thornhill</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35090&#x2F;">Thunder&nbsp;Bay&ZeroWidthSpace;&mdash;Rainy&nbsp;River</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35091&#x2F;">Thunder&nbsp;Bay&ZeroWidthSpace;&mdash;Superior&nbsp;North</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35092&#x2F;">Timmins&ZeroWidthSpace;&mdash;James&nbsp;Bay</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35093&#x2F;">Toronto&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35094&#x2F;">Toronto&ZeroWidthSpace;&mdash;Danforth</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35095&#x2F;">Trinity&ZeroWidthSpace;&mdash;Spadina</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35096&#x2F;">Vaughan</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35097&#x2F;">Welland</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35098&#x2F;">Wellington&ZeroWidthSpace;&mdash;Halton&nbsp;Hills</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35099&#x2F;">Whitby&ZeroWidthSpace;&mdash;Oshawa</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35100&#x2F;">Willowdale</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35101&#x2F;">Windsor&ZeroWidthSpace;&mdash;Tecumseh</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35102&#x2F;">Windsor&nbsp;West</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35103&#x2F;">York&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35104&#x2F;">York&ZeroWidthSpace;&mdash;Simcoe</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35105&#x2F;">York&nbsp;South&ZeroWidthSpace;&mdash;Weston</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;35106&#x2F;">York&nbsp;West</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46001&#x2F;">Brandon&ZeroWidthSpace;&mdash;Souris</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46002&#x2F;">Charleswood&ZeroWidthSpace;&mdash;St.&nbsp;James&ZeroWidthSpace;&mdash;Assiniboia</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46003&#x2F;">Churchill</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46004&#x2F;">Dauphin&ZeroWidthSpace;&mdash;Swan&nbsp;River&ZeroWidthSpace;&mdash;Marquette</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46005&#x2F;">Elmwood&ZeroWidthSpace;&mdash;Transcona</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46006&#x2F;">Kildonan&ZeroWidthSpace;&mdash;St.&nbsp;Paul</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46007&#x2F;">Portage&ZeroWidthSpace;&mdash;Lisgar</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46008&#x2F;">Provencher</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46009&#x2F;">Saint&nbsp;Boniface</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46010&#x2F;">Selkirk&ZeroWidthSpace;&mdash;Interlake</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46011&#x2F;">Winnipeg&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46012&#x2F;">Winnipeg&nbsp;North</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46013&#x2F;">Winnipeg&nbsp;South</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;46014&#x2F;">Winnipeg&nbsp;South&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47001&#x2F;">Battlefords&ZeroWidthSpace;&mdash;Lloydminster</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47002&#x2F;">Blackstrap</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47003&#x2F;">Desnethé&ZeroWidthSpace;&mdash;Missinippi&ZeroWidthSpace;&mdash;Churchill&nbsp;River</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47004&#x2F;">Cypress&nbsp;Hills&ZeroWidthSpace;&mdash;Grasslands</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47005&#x2F;">Palliser</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47006&#x2F;">Prince&nbsp;Albert</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47007&#x2F;">Regina&ZeroWidthSpace;&mdash;Lumsden&ZeroWidthSpace;&mdash;Lake&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47008&#x2F;">Regina&ZeroWidthSpace;&mdash;Qu'Appelle</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47009&#x2F;">Saskatoon&ZeroWidthSpace;&mdash;Humboldt</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47010&#x2F;">Saskatoon&ZeroWidthSpace;&mdash;Rosetown&ZeroWidthSpace;&mdash;Biggar</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47011&#x2F;">Saskatoon&ZeroWidthSpace;&mdash;Wanuskewin</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47012&#x2F;">Souris&ZeroWidthSpace;&mdash;Moose&nbsp;Mountain</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47013&#x2F;">Wascana</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;47014&#x2F;">Yorkton&ZeroWidthSpace;&mdash;Melville</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48001&#x2F;">Fort&nbsp;McMurray&ZeroWidthSpace;&mdash;Athabasca</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48002&#x2F;">Calgary&nbsp;East</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48003&#x2F;">Calgary&nbsp;Centre&#x2011;North</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48004&#x2F;">Calgary&nbsp;Northeast</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48005&#x2F;">Calgary&ZeroWidthSpace;&mdash;Nose&nbsp;Hill</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48006&#x2F;">Calgary&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48007&#x2F;">Calgary&nbsp;Southeast</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48008&#x2F;">Calgary&nbsp;Southwest</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48009&#x2F;">Calgary&nbsp;West</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48010&#x2F;">Crowfoot</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48011&#x2F;">Edmonton&ZeroWidthSpace;&mdash;Mill&nbsp;Woods&ZeroWidthSpace;&mdash;Beaumont</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48012&#x2F;">Edmonton&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48013&#x2F;">Edmonton&nbsp;East</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48014&#x2F;">Edmonton&ZeroWidthSpace;&mdash;Leduc</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48015&#x2F;">Edmonton&ZeroWidthSpace;&mdash;St.&nbsp;Albert</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48016&#x2F;">Edmonton&ZeroWidthSpace;&mdash;Sherwood&nbsp;Park</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48017&#x2F;">Edmonton&ZeroWidthSpace;&mdash;Spruce&nbsp;Grove</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48018&#x2F;">Edmonton&ZeroWidthSpace;&mdash;Strathcona</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48019&#x2F;">Lethbridge</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48020&#x2F;">Macleod</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48021&#x2F;">Medicine&nbsp;Hat</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48022&#x2F;">Peace&nbsp;River</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48023&#x2F;">Red&nbsp;Deer</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48024&#x2F;">Vegreville&ZeroWidthSpace;&mdash;Wainwright</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48025&#x2F;">Westlock&ZeroWidthSpace;&mdash;St.&nbsp;Paul</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48026&#x2F;">Wetaskiwin</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48027&#x2F;">Wild&nbsp;Rose</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;48028&#x2F;">Yellowhead</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59001&#x2F;">Abbotsford</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59002&#x2F;">Burnaby&ZeroWidthSpace;&mdash;Douglas</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59003&#x2F;">Burnaby&ZeroWidthSpace;&mdash;New&nbsp;Westminster</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59004&#x2F;">Cariboo&ZeroWidthSpace;&mdash;Prince&nbsp;George</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59005&#x2F;">Chilliwack&ZeroWidthSpace;&mdash;Fraser&nbsp;Canyon</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59006&#x2F;">Delta&ZeroWidthSpace;&mdash;Richmond&nbsp;East</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59007&#x2F;">Pitt&nbsp;Meadows&ZeroWidthSpace;&mdash;Maple&nbsp;Ridge&ZeroWidthSpace;&mdash;Mission</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59008&#x2F;">Esquimalt&ZeroWidthSpace;&mdash;Juan&nbsp;de&nbsp;Fuca</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59009&#x2F;">Fleetwood&ZeroWidthSpace;&mdash;Port&nbsp;Kells</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59010&#x2F;">Kamloops&ZeroWidthSpace;&mdash;Thompson&ZeroWidthSpace;&mdash;Cariboo</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59011&#x2F;">Kelowna&ZeroWidthSpace;&mdash;Lake&nbsp;Country</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59012&#x2F;">Kootenay&ZeroWidthSpace;&mdash;Columbia</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59013&#x2F;">Langley</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59014&#x2F;">Nanaimo&ZeroWidthSpace;&mdash;Alberni</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59015&#x2F;">Nanaimo&ZeroWidthSpace;&mdash;Cowichan</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59016&#x2F;">Newton&ZeroWidthSpace;&mdash;North&nbsp;Delta</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59017&#x2F;">New&nbsp;Westminster&ZeroWidthSpace;&mdash;Coquitlam</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59018&#x2F;">Okanagan&ZeroWidthSpace;&mdash;Shuswap</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59019&#x2F;">North&nbsp;Vancouver</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59020&#x2F;">Okanagan&ZeroWidthSpace;&mdash;Coquihalla</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59021&#x2F;">Port&nbsp;Moody&ZeroWidthSpace;&mdash;Westwood&ZeroWidthSpace;&mdash;Port&nbsp;Coquitlam</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59022&#x2F;">Prince&nbsp;George&ZeroWidthSpace;&mdash;Peace&nbsp;River</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59023&#x2F;">Richmond</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59024&#x2F;">Saanich&ZeroWidthSpace;&mdash;Gulf&nbsp;Islands</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59025&#x2F;">Skeena&ZeroWidthSpace;&mdash;Bulkley&nbsp;Valley</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59026&#x2F;">British&nbsp;Columbia&nbsp;Southern&nbsp;Interior</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59027&#x2F;">South&nbsp;Surrey&ZeroWidthSpace;&mdash;White&nbsp;Rock&ZeroWidthSpace;&mdash;Cloverdale</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59028&#x2F;">Surrey&nbsp;North</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59029&#x2F;">Vancouver&nbsp;Centre</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59030&#x2F;">Vancouver&nbsp;East</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59031&#x2F;">Vancouver&nbsp;Island&nbsp;North</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59032&#x2F;">Vancouver&nbsp;Kingsway</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59033&#x2F;">Vancouver&nbsp;Quadra</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59034&#x2F;">Vancouver&nbsp;South</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59035&#x2F;">Victoria</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;59036&#x2F;">West&nbsp;Vancouver&ZeroWidthSpace;&mdash;Sunshine&nbsp;Coast&ZeroWidthSpace;&mdash;Sea&nbsp;to&nbsp;Sky&nbsp;Country</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;60001&#x2F;">Yukon</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;61001&#x2F;">Western&nbsp;Arctic</a>
+        </li>
+    
+        <li><a href="https:&#x2F;&#x2F;votescount.ca&#x2F;ca&#x2F;election&#x2F;41&#x2F;62001&#x2F;">Nunavut</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+
+<footer>
+
+
+</footer>
+
+</body>
+</html>
