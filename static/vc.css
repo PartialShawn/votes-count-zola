@@ -4,15 +4,16 @@
 }
 
 body {
-    font-family: "Share", sans-serif;
-    margin: 0;
     background: repeating-linear-gradient(
         45deg,
-        oklch(95% .03 330),
-        oklch(95% .03 330)  2em,
-        oklch(90% .05 330)  2em,
-        oklch(90% .05 330)  3em
+        oklch(99% .05 330),
+        oklch(99% .05 330)  2em,
+        oklch(98% .05 330)  2em,
+        oklch(98% .05 330)  3em
         );
+    font-family: "Share", sans-serif;
+    margin: 0;
+    min-height: 100dvh;
     .site_header {
         grid-area: header;
 
@@ -176,20 +177,20 @@ body > nav.ca_prov {
     }
 }
 
-.ca_e_district_results {
+.ca_e_district_results, .ca_e_list {
     margin: 2em;
 
     h3 {
         margin: 10px 0 0 5px;
     }
     
-    .province {
+    > div {
         display: grid;
         /* grid-template-columns: repeat(5, 1fr); */
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: .3em;
+        gap: .5em;
 
     }
     
@@ -198,14 +199,18 @@ body > nav.ca_prov {
         display: inline-block;
         /* margin: .5em; */
         background-color: oklch(98% .01 var(--p_hue));
+        /* border: solid 2px oklch(90% .1 var(--p_hue)); */
+        border: solid 3px oklch(98% .01 var(--p_hue));
         padding: 0;
-        border: outset 2px oklch(95% .09 var(--p_hue));
-        border-radius: 6px;
+        /* border-top: solid 5px oklch(70% .1 var(--p_hue)); */
+        /* border-bottom: solid 5px oklch(70% .1 var(--p_hue)); */
+        /* border-radius: 6px; */
         text-decoration: none;
         color: black;
         
         > header {
             padding-inline: .2em;
+            background: oklch(98% .1 var(--p_hue));
             border-bottom: solid 1px oklch(100% .15 var(--p_hue));
             margin-bottom: 2px;
             min-height: 2.5em;
@@ -224,7 +229,7 @@ body > nav.ca_prov {
         > footer {
             /* padding-inline: .5em; */
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: .2em;
             margin: .2em;
             --p_hue: 330;
@@ -234,6 +239,7 @@ body > nav.ca_prov {
                 border-bottom: solid 2px oklch(50% .2 var(--p_hue));
                 background: oklch(98% .1 var(--p_hue));
                 text-align: center;
+                overflow-x: hidden;
             }
         }
     }

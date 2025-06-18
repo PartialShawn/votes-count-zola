@@ -10,27 +10,33 @@
 {% block children %}
 
 
-<div class="ca_e_list">
+<div class="ca_e_list"><div class="">
 {% for s in section.subsections %}
     {% set s = get_section(path=s) %}
-    <div class="card ">
+    {% set party_data = load_data(path="data/ca_ge"~s.extra.election_id~"_parties.json") %}
+
+    <a class="card party" href="{{ s.permalink }}">
         <header>
-            <a href="{{ s.permalink }}">🗳️ {{ s.title }}</a>
+            🗳️ {{ s.title }}
         </header>
         <div class="candidate">
-            <span class="badge p_liberal">Liberal</span>
-            YYYY
+            <span class="badge p_liberal">[Winner]</span>
+            ([Year])
         </div>
         <footer class="district_history">
-            <div>P</div>
-            <div>A</div>
-            <div>R</div>
-            <div>T</div>
-            <div>Y</div>
+            {% set_global count = 1 %}
+            {% for id,party in party_data['CA'] %}
+            <div class="p_{{ id }}">
+                {{id}}<br/>
+                {{ party['pb_mean'] }}%
+            </div>
+            {% set_global count = count + 1 %}
+            {% if count > 4 %}{% break %}{% endif %}
+        {% endfor %}
         </footer>
-    </div>
+    </a>
 {% endfor  %}
-</div>
+</div></div>
 </article>
 
 {% endblock children %}

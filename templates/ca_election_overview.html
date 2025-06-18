@@ -47,8 +47,8 @@
             <div class="p_{{ candidate['party']}}">
                 {{ candidate['per_ballots']}}%
             </div>
-            {% if count >= 5 %}{% break %}{% endif %}
             {% set_global count = count + 1 %}
+            {% if count > 4 %}{% break %}{% endif %}
         {% endfor %}
         </footer>
     </a>
